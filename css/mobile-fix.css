@@ -1,0 +1,348 @@
+/* Mobile Alignment Fix for Education and Work Sections */
+/* This file forces left alignment on mobile devices */
+
+/* Alternative media query syntax for better mobile support */
+@media screen and (max-width: 767px) {
+   #resume .education,
+   #resume .work {
+      text-align: left !important;
+      margin: 0 !important;
+      width: 100% !important;
+   }
+   
+   #resume .education *,
+   #resume .work * {
+      text-align: left !important;
+   }
+}
+
+/* Touch device specific */
+@media (max-width: 767px) and (pointer: coarse) {
+   #resume .education,
+   #resume .work {
+      text-align: left !important;
+      margin: 0 !important;
+      width: 100% !important;
+   }
+   
+   #resume .education *,
+   #resume .work * {
+      text-align: left !important;
+   }
+}
+
+/* TEST: This should make education and work sections have a red background on mobile */
+@media only screen and (max-width: 767px) {
+   #resume .education,
+   #resume .work {
+      background-color: rgba(255, 0, 0, 0.1) !important; /* Light red background for testing */
+   }
+}
+
+/* Device-specific mobile fixes */
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+   #resume .education,
+   #resume .work {
+      text-align: left !important;
+      margin: 0 !important;
+      width: 100% !important;
+   }
+   
+   #resume .education *,
+   #resume .work * {
+      text-align: left !important;
+   }
+}
+
+/* iOS Safari specific */
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
+   #resume .education,
+   #resume .work {
+      text-align: left !important;
+      margin: 0 !important;
+      width: 100% !important;
+   }
+   
+   #resume .education *,
+   #resume .work * {
+      text-align: left !important;
+   }
+}
+
+/* Android Chrome specific */
+@media only screen and (max-width: 767px) and (min-resolution: 1dppx) {
+   #resume .education,
+   #resume .work {
+      text-align: left !important;
+      margin: 0 !important;
+      width: 100% !important;
+   }
+   
+   #resume .education *,
+   #resume .work * {
+      text-align: left !important;
+   }
+}
+
+/* NUCLEAR OPTION: Force alignment using transform for mobile devices */
+@media only screen and (max-width: 767px) {
+   #resume .education,
+   #resume .work {
+      text-align: left !important;
+      margin: 0 !important;
+      width: 100% !important;
+      transform: translateX(0) !important;
+      -webkit-transform: translateX(0) !important;
+   }
+   
+   #resume .education .row,
+   #resume .work .row,
+   #resume .education .row.item,
+   #resume .work .row.item {
+      text-align: left !important;
+      margin: 0 !important;
+      width: 100% !important;
+      transform: translateX(0) !important;
+      -webkit-transform: translateX(0) !important;
+   }
+   
+   #resume .education .column,
+   #resume .education .columns,
+   #resume .work .column,
+   #resume .work .columns {
+      text-align: left !important;
+      margin: 0 !important;
+      width: 100% !important;
+      transform: translateX(0) !important;
+      -webkit-transform: translateX(0) !important;
+   }
+}
+
+/* EMERGENCY OVERRIDE - This should definitely work */
+@media only screen and (max-width: 767px) {
+   /* Force everything in education and work to be left-aligned */
+   #resume .education,
+   #resume .work {
+      text-align: left !important;
+      margin: 0 !important;
+      width: 100% !important;
+   }
+   
+   #resume .education *,
+   #resume .work * {
+      text-align: left !important;
+   }
+   
+   /* Target the specific grid system that's causing centering */
+   #resume .row.education,
+   #resume .row.work {
+      margin: 0 !important;
+      width: 100% !important;
+      max-width: none !important;
+      text-align: left !important;
+   }
+   
+   #resume .row.education .row,
+   #resume .row.work .row,
+   #resume .row.education .row.item,
+   #resume .row.work .row.item {
+      margin: 0 !important;
+      width: 100% !important;
+      max-width: none !important;
+      text-align: left !important;
+   }
+   
+   #resume .row.education .column,
+   #resume .row.education .columns,
+   #resume .row.work .column,
+   #resume .row.work .columns {
+      text-align: left !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      width: 100% !important;
+      float: none !important;
+   }
+}
+
+/* Mobile wide/smaller tablets - 767px and below */
+@media only screen and (max-width: 767px) {
+   
+   /* CRITICAL: Override all possible conflicting styles with maximum specificity */
+   html body #resume .row.education,
+   html body #resume .row.work {
+      margin: 0 !important;
+      width: 100% !important;
+      max-width: none !important;
+      text-align: left !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      display: block !important;
+      float: none !important;
+   }
+   
+   /* Force left alignment for all rows within education and work */
+   html body #resume .row.education .row,
+   html body #resume .row.work .row,
+   html body #resume .row.education .row.item,
+   html body #resume .row.work .row.item {
+      margin: 0 !important;
+      width: 100% !important;
+      max-width: none !important;
+      text-align: left !important;
+      display: block !important;
+      float: none !important;
+   }
+   
+   /* Force left alignment for all columns within resume */
+   html body #resume .row.education .column,
+   html body #resume .row.education .columns,
+   html body #resume .row.work .column,
+   html body #resume .row.work .columns,
+   html body #resume .row.education .row .column,
+   html body #resume .row.education .row .columns,
+   html body #resume .row.work .row .column,
+   html body #resume .row.work .row .columns {
+      text-align: left !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+      float: none !important;
+      width: 100% !important;
+   }
+   
+   /* Force left alignment for header columns */
+   html body #resume .row.education .three.columns.header-col,
+   html body #resume .row.work .three.columns.header-col {
+      text-align: left !important;
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+      width: 100% !important;
+      float: none !important;
+   }
+   
+   /* Force left alignment for main content columns */
+   html body #resume .row.education .nine.columns.main-col,
+   html body #resume .row.work .nine.columns.main-col {
+      text-align: left !important;
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+      width: 100% !important;
+      float: none !important;
+   }
+   
+   /* Force left alignment for all text content */
+   html body #resume .row.education h1,
+   html body #resume .row.education h3,
+   html body #resume .row.education p,
+   html body #resume .row.work h1,
+   html body #resume .row.work h3,
+   html body #resume .row.work p {
+      text-align: left !important;
+   }
+   
+   /* Additional override for any remaining centering */
+   html body #resume .row.education *,
+   html body #resume .row.work * {
+      text-align: left !important;
+   }
+   
+   /* Nuclear option: Override any grid system centering */
+   html body #resume .row.education,
+   html body #resume .row.work,
+   html body #resume .row.education .row,
+   html body #resume .row.work .row {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      margin: 0 auto 0 0 !important;
+   }
+}
+
+/* Mobile narrow - 480px and below */
+@media only screen and (max-width: 480px) {
+   
+   /* CRITICAL: Override all possible conflicting styles with maximum specificity */
+   html body #resume .row.education,
+   html body #resume .row.work {
+      margin: 0 !important;
+      width: 100% !important;
+      max-width: none !important;
+      text-align: left !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      display: block !important;
+      float: none !important;
+   }
+   
+   html body #resume .row.education .row,
+   html body #resume .row.work .row,
+   html body #resume .row.education .row.item,
+   html body #resume .row.work .row.item {
+      margin: 0 !important;
+      width: 100% !important;
+      max-width: none !important;
+      text-align: left !important;
+      display: block !important;
+      float: none !important;
+   }
+   
+   html body #resume .row.education .column,
+   html body #resume .row.education .columns,
+   html body #resume .row.work .column,
+   html body #resume .row.work .columns,
+   html body #resume .row.education .row .column,
+   html body #resume .row.education .row .columns,
+   html body #resume .row.work .row .column,
+   html body #resume .row.work .row .columns {
+      text-align: left !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+      float: none !important;
+      width: 100% !important;
+   }
+   
+   html body #resume .row.education .three.columns.header-col,
+   html body #resume .row.work .three.columns.header-col {
+      text-align: left !important;
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+      width: 100% !important;
+      float: none !important;
+   }
+   
+   html body #resume .row.education .nine.columns.main-col,
+   html body #resume .row.work .nine.columns.main-col {
+      text-align: left !important;
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+      width: 100% !important;
+      float: none !important;
+   }
+   
+   html body #resume .row.education h1,
+   html body #resume .row.education h3,
+   html body #resume .row.education p,
+   html body #resume .row.work h1,
+   html body #resume .row.work h3,
+   html body #resume .row.work p {
+      text-align: left !important;
+   }
+   
+   /* Additional override for any remaining centering */
+   html body #resume .row.education *,
+   html body #resume .row.work * {
+      text-align: left !important;
+   }
+   
+   /* Nuclear option: Override any grid system centering */
+   html body #resume .row.education,
+   html body #resume .row.work,
+   html body #resume .row.education .row,
+   html body #resume .row.work .row {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      margin: 0 auto 0 0 !important;
+   }
+}

@@ -749,6 +749,23 @@ properly.
    .row .offset-9    { margin-left: 0%; }
    .row .offset-10   { margin-left: 0%; }
    .row .offset-11   { margin-left: 0%; }
+   
+   /* Override grid centering for resume section on mobile */
+   #resume .row {
+      margin: 0 !important;
+      width: auto !important;
+   }
+   .education .row, .work .row {
+      margin: 0 !important;
+      width: auto !important;
+   }
+   .education .row.item, .work .row.item {
+      margin: 0 !important;
+      width: auto !important;
+   }
+   #resume .column, #resume .columns {
+      text-align: left !important;
+   }
 }
 
 /* mobile narrow
@@ -756,6 +773,23 @@ properly.
 @media only screen and (max-width: 460px) {
 
    .row { width: auto; }
+   
+   /* Override grid centering for resume section on narrow mobile */
+   #resume .row {
+      margin: 0 !important;
+      width: auto !important;
+   }
+   .education .row, .work .row {
+      margin: 0 !important;
+      width: auto !important;
+   }
+   .education .row.item, .work .row.item {
+      margin: 0 !important;
+      width: auto !important;
+   }
+   #resume .column, #resume .columns {
+      text-align: left !important;
+   }
 
 }
 

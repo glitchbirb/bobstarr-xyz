@@ -234,6 +234,23 @@
    #resume h1 { letter-spacing: 3px; }
    #resume .main-col { padding-right: 30px; }
    #resume h3, #resume .info { text-align: left; }
+   
+   /* Ensure education and work sections are left-aligned on mobile */
+   .education, .work {
+      text-align: left;
+   }
+   .education .row, .work .row {
+      text-align: left;
+      margin: 0 !important;
+      width: auto !important;
+   }
+   
+   /* Override the default centered row behavior for resume section on mobile */
+   #resume .row {
+      margin: 0 !important;
+      text-align: left;
+      width: auto !important;
+   }
       
    .bars { width: 100%; }
 
@@ -335,6 +352,45 @@
       line-height: 54px;
    }
 
+   /* MOBILE LEFT ALIGNMENT FIX - DIRECTLY IN MEDIA QUERIES */
+   #resume .education,
+   #resume .work {
+      background-color: rgba(255, 0, 0, 0.2) !important; /* RED BACKGROUND FOR TESTING */
+      text-align: left !important;
+      margin: 0 !important;
+      width: 100% !important;
+   }
+   
+   #resume .education *,
+   #resume .work * {
+      text-align: left !important;
+   }
+   
+   #resume .row.education,
+   #resume .row.work {
+      margin: 0 !important;
+      width: 100% !important;
+      text-align: left !important;
+   }
+   
+   #resume .row.education .row,
+   #resume .row.work .row,
+   #resume .row.education .row.item,
+   #resume .row.work .row.item {
+      margin: 0 !important;
+      width: 100% !important;
+      text-align: left !important;
+   }
+   
+   #resume .row.education .column,
+   #resume .row.education .columns,
+   #resume .row.work .column,
+   #resume .row.work .columns {
+      text-align: left !important;
+      margin: 0 !important;
+      width: 100% !important;
+   }
+
 
 }
 
@@ -346,6 +402,18 @@
    /* mobile navigation
    -------------------------------------------------------------------- */
    #nav-wrap ul#nav { width: auto; float: none; }
+   
+   /* Ensure education and work sections remain left-aligned on narrow mobile */
+   .education .row, .work .row {
+      margin: 0 !important;
+      width: auto !important;
+      text-align: left;
+   }
+   #resume .row {
+      margin: 0 !important;
+      width: auto !important;
+      text-align: left;
+   }
 
    /* header styles
    -------------------------------------------------------------------- */
@@ -369,6 +437,20 @@
    /* social links */
    footer .social-links { font-size: 20px; }
    footer .social-links li { margin-left: 14px; }   
+
+   /* MOBILE LEFT ALIGNMENT FIX - 480px */
+   #resume .education,
+   #resume .work {
+      background-color: rgba(255, 0, 0, 0.2) !important; /* RED BACKGROUND FOR TESTING */
+      text-align: left !important;
+      margin: 0 !important;
+      width: 100% !important;
+   }
+   
+   #resume .education *,
+   #resume .work * {
+      text-align: left !important;
+   }
 
 }
 

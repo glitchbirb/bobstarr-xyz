@@ -7,6 +7,30 @@
  jQuery(document).ready(function($) {
 
 /*----------------------------------------------------*/
+/* Mobile Left Alignment Fix
+------------------------------------------------------ */
+
+    // Force left alignment on mobile devices
+    function forceMobileLeftAlignment() {
+        if ($(window).width() <= 767) {
+            $('#resume .education, #resume .work').css({
+                'text-align': 'left',
+                'margin': '0',
+                'width': '100%'
+            });
+            $('#resume .education *, #resume .work *').css('text-align', 'left');
+        }
+    }
+    
+    // Run on page load
+    forceMobileLeftAlignment();
+    
+    // Run on window resize
+    $(window).on('resize', function() {
+        forceMobileLeftAlignment();
+    });
+
+/*----------------------------------------------------*/
 /* FitText Settings
 ------------------------------------------------------ */
 
