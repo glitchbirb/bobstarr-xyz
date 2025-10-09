@@ -355,7 +355,6 @@
    /* MOBILE LEFT ALIGNMENT FIX - DIRECTLY IN MEDIA QUERIES */
    #resume .education,
    #resume .work {
-      background-color: rgba(255, 0, 0, 0.2) !important; /* RED BACKGROUND FOR TESTING */
       text-align: left !important;
       margin: 0 !important;
       width: 100% !important;
@@ -441,7 +440,6 @@
    /* MOBILE LEFT ALIGNMENT FIX - 480px */
    #resume .education,
    #resume .work {
-      background-color: rgba(255, 0, 0, 0.2) !important; /* RED BACKGROUND FOR TESTING */
       text-align: left !important;
       margin: 0 !important;
       width: 100% !important;
